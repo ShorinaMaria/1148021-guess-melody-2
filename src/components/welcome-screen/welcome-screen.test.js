@@ -7,7 +7,7 @@ it(`welcome-screen renders correctly`, () => {
       <WelcomeScreen
         time={5}
         errorCount={3}
-        onClick={() => {}}
+        onStartButtonClick={() => {}}
       />
   ).toJSON();
 
