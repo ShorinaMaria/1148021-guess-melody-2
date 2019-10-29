@@ -14,9 +14,9 @@ class GenreQuestionScreen extends React.PureComponent {
     return {answers: this.props.question.answers.map(() => false)};
   }
 
-  handleAnswerChange(answerIndex) {
+  handleAnswerChange(event, answerIndex) {
     const answers = this.state.answers.map((el, i) => {
-      return i === answerIndex ? !el : el;
+      return i === answerIndex ? event.target.checked : el;
     });
     this.setState({answers});
   }
@@ -70,8 +70,8 @@ class GenreQuestionScreen extends React.PureComponent {
                   <div className="game__answer">
                     <input className="game__input visually-hidden"
                       type="checkbox"
-                      checked={this.state.answers[i] ? `checked` : undefined}
-                      onChange={() => this.handleAnswerChange(i)}
+                      checked={this.state.answers[i]}
+                      onChange={(event) => this.handleAnswerChange(event, i)}
                       name={`answer-${i}`}
                       value={`answer-${i}`}
                       id={`answer-${i}`} />
