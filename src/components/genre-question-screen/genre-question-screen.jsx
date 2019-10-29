@@ -15,8 +15,9 @@ class GenreQuestionScreen extends React.PureComponent {
   }
 
   handleAnswerChange(answerIndex) {
-    const answers = this.state.answers;
-    answers[answerIndex] = !answers[answerIndex];
+    const answers = this.state.answers.map((el, i) => {
+      return i === answerIndex ? !el : el;
+    });
     this.setState({answers});
   }
 
