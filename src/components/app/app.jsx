@@ -51,26 +51,29 @@ class App extends React.PureComponent {
     this.state = {
       question: -1,
     };
+
+    this.handleUserAnswer = this.handleUserAnswer.bind(this);
   }
 
-  render() {
+  handleUserAnswer(answers) {
     const {
       questions,
     } = this.props;
-    const {question} = this.state;
+    App.checkAnswer(answers); // используем answers, чтобы линтер не ругался на unused переменную
+    this.setState((prevState) => {
+      const nextIndex = prevState.question + 1;
+      const isEnd = nextIndex >= questions.length;
 
-    return App.getScreen(question, this.props, (answers) => {
-      App.checkAnswer(answers); // используем answers, чтобы линтер не ругался на unused переменную
-      this.setState((prevState) => {
-        const nextIndex = prevState.question + 1;
-        const isEnd = nextIndex >= questions.length;
-
-        return {
-          ...prevState,
-          question: !isEnd ? nextIndex : -1,
-        };
-      });
+      return {
+        ...prevState,
+        question: !isEnd ? nextIndex : -1,
+      };
     });
+  }
+
+  render() {
+    const {question} = this.state;
+    return App.getScreen(question, this.props, this.handleUserAnswer);
   }
 }
 
