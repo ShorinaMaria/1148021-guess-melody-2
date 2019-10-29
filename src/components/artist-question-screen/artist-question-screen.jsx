@@ -62,8 +62,6 @@ const ArtistQuestionScreen = ({question, screenIndex, onAnswer}) => {
   );
 };
 
-// const genres = [`rock`, `jazz`, `folk`, `blues`, `pop`];
-
 export const ArtistQuestion = PropTypes.shape({
   type: PropTypes.oneOf([`artist`]),
   song: PropTypes.shape({
@@ -75,16 +73,6 @@ export const ArtistQuestion = PropTypes.shape({
     artist: PropTypes.string
   }))
 });
-
-// PropTypes.shape({
-//   type: `artist`,
-//   genre: PropTypes.oneOf(genres),
-//   answers: PropTypes.any
-//   // answers: PropTypes.arrayOf(PropTypes.shape({
-//   //   src: PropTypes.string,
-//   //   genre: PropTypes.oneOf(genres)
-//   // }))
-// });
 
 ArtistQuestionScreen.propTypes = {
   question: ArtistQuestion,
