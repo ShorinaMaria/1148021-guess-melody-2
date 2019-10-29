@@ -25,12 +25,14 @@ class App extends React.PureComponent {
 
     if (currentQuestion.type === `genre`) {
       return <GenreQuestionScreen
+        key={`genre-screen-${question}`}
         screenIndex={question}
         question={currentQuestion}
         onAnswer={onUserAnswer}
       />;
     } else if (currentQuestion.type === `artist`) {
       return <ArtistQuestionScreen
+        key={`artist-screen-${question}`}
         screenIndex={question}
         question={currentQuestion}
         onAnswer={onUserAnswer}

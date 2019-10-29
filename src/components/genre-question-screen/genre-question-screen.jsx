@@ -4,14 +4,10 @@ import PropTypes from 'prop-types';
 class GenreQuestionScreen extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.state = this.getInitialState();
+    this.state = {answers: this.props.question.answers.map(() => false)};
 
     this.handleAnswerChange = this.handleAnswerChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  getInitialState() {
-    return {answers: this.props.question.answers.map(() => false)};
   }
 
   handleAnswerChange(event, answerIndex) {
@@ -26,7 +22,6 @@ class GenreQuestionScreen extends React.PureComponent {
     const answers = this.state.answers;
     const userAnswerIndexes = Object.keys(answers).filter((el) => answers[el]);
     this.props.onAnswer(userAnswerIndexes.map((i) => this.props.question.answers[i]));
-    this.setState(this.getInitialState());
   }
 
   render() {
