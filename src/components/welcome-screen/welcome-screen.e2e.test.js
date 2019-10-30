@@ -12,7 +12,7 @@ it(`startButton works`, () => {
       <WelcomeScreen
         time={10}
         errorCount={3}
-        onClick={clickHandler}
+        onStartButtonClick={clickHandler}
       />
   );
 
