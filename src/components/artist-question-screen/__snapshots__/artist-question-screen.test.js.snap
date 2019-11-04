@@ -1,155 +1,190 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ArtistQuestionScreen renders correctly 1`] = `
-<section
-  className="game game--artist"
+<ArtistQuestionScreen
+  onAnswer={[Function]}
+  question={
+    Object {
+      "answers": Array [
+        Object {
+          "artist": "John Snow",
+          "picture": "http://placehold.it/134x134",
+        },
+        Object {
+          "artist": "Jack Daniels",
+          "picture": "http://placehold.it/134x134",
+        },
+        Object {
+          "artist": "Placebo",
+          "picture": "http://placehold.it/134x134",
+        },
+      ],
+      "song": Object {
+        "artist": "Placebo",
+        "src": "http://dl2.mp3party.net/online/8468238.mp3",
+      },
+      "type": "artist",
+    }
+  }
+  screenIndex={1}
 >
-  <header
-    className="game__header"
-  >
-    <a
-      className="game__back"
-    >
-      <span
-        className="visually-hidden"
-      >
-        Сыграть ещё раз
-      </span>
-      <img
-        alt="Угадай мелодию"
-        className="game__logo"
-        src="img/melody-logo-ginger.png"
-      />
-    </a>
-    <div
-      className="timer__value"
-    >
-      <span
-        className="timer__mins"
-      >
-        05
-      </span>
-      <span
-        className="timer__dots"
-      >
-        :
-      </span>
-      <span
-        className="timer__secs"
-      >
-        00
-      </span>
-    </div>
-    <div
-      className="game__mistakes"
-    >
-      <div
-        className="wrong"
-      />
-      <div
-        className="wrong"
-      />
-      <div
-        className="wrong"
-      />
-    </div>
-  </header>
   <section
-    className="game__screen"
+    className="game game--artist"
   >
-    <h2
-      className="game__title"
+    <header
+      className="game__header"
     >
-      Кто исполняет эту песню?
-    </h2>
-    <div
-      className="game__track"
-    >
-      <div
-        className="track"
+      <a
+        className="game__back"
       >
-        <button
-          className="track__button track__button--play"
-          type="button"
+        <span
+          className="visually-hidden"
+        >
+          Сыграть ещё раз
+        </span>
+        <img
+          alt="Угадай мелодию"
+          className="game__logo"
+          src="img/melody-logo-ginger.png"
+        />
+      </a>
+      <div
+        className="timer__value"
+      >
+        <span
+          className="timer__mins"
+        >
+          05
+        </span>
+        <span
+          className="timer__dots"
+        >
+          :
+        </span>
+        <span
+          className="timer__secs"
+        >
+          00
+        </span>
+      </div>
+      <div
+        className="game__mistakes"
+      >
+        <div
+          className="wrong"
         />
         <div
-          className="track__status"
-        >
-          <audio />
-        </div>
+          className="wrong"
+        />
+        <div
+          className="wrong"
+        />
       </div>
-    </div>
-    <form
-      className="game__artist"
-      onChange={[Function]}
+    </header>
+    <section
+      className="game__screen"
     >
-      <div
-        className="artist"
+      <h2
+        className="game__title"
       >
-        <input
-          className="artist__input visually-hidden"
-          id="answer-0"
-          name="answer"
-          type="radio"
-          value={0}
-        />
-        <label
-          className="artist__name"
-          htmlFor="answer-0"
-        >
-          <img
-            alt="John Snow"
-            className="artist__picture"
-            src="http://placehold.it/134x134"
-          />
-          John Snow
-        </label>
-      </div>
+        Кто исполняет эту песню?
+      </h2>
       <div
-        className="artist"
+        className="game__track"
       >
-        <input
-          className="artist__input visually-hidden"
-          id="answer-1"
-          name="answer"
-          type="radio"
-          value={1}
-        />
-        <label
-          className="artist__name"
-          htmlFor="answer-1"
+        <AudioPlayer
+          isPlaying={false}
+          onPlayButtonClick={[Function]}
+          src="http://dl2.mp3party.net/online/8468238.mp3"
         >
-          <img
-            alt="Jack Daniels"
-            className="artist__picture"
-            src="http://placehold.it/134x134"
+          <button
+            className="track__button track__button--play"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
           />
-          Jack Daniels
-        </label>
+          <div
+            className="track__status"
+          >
+            <audio />
+          </div>
+        </AudioPlayer>
       </div>
-      <div
-        className="artist"
+      <form
+        className="game__artist"
+        onChange={[Function]}
       >
-        <input
-          className="artist__input visually-hidden"
-          id="answer-2"
-          name="answer"
-          type="radio"
-          value={2}
-        />
-        <label
-          className="artist__name"
-          htmlFor="answer-2"
+        <div
+          className="artist"
+          key="1-answer-0"
         >
-          <img
-            alt="Jim Beam"
-            className="artist__picture"
-            src="http://placehold.it/134x134"
+          <input
+            className="artist__input visually-hidden"
+            id="answer-0"
+            name="answer"
+            type="radio"
+            value={0}
           />
-          Jim Beam
-        </label>
-      </div>
-    </form>
+          <label
+            className="artist__name"
+            htmlFor="answer-0"
+          >
+            <img
+              alt="John Snow"
+              className="artist__picture"
+              src="http://placehold.it/134x134"
+            />
+            John Snow
+          </label>
+        </div>
+        <div
+          className="artist"
+          key="1-answer-1"
+        >
+          <input
+            className="artist__input visually-hidden"
+            id="answer-1"
+            name="answer"
+            type="radio"
+            value={1}
+          />
+          <label
+            className="artist__name"
+            htmlFor="answer-1"
+          >
+            <img
+              alt="Jack Daniels"
+              className="artist__picture"
+              src="http://placehold.it/134x134"
+            />
+            Jack Daniels
+          </label>
+        </div>
+        <div
+          className="artist"
+          key="1-answer-2"
+        >
+          <input
+            className="artist__input visually-hidden"
+            id="answer-2"
+            name="answer"
+            type="radio"
+            value={2}
+          />
+          <label
+            className="artist__name"
+            htmlFor="answer-2"
+          >
+            <img
+              alt="Placebo"
+              className="artist__picture"
+              src="http://placehold.it/134x134"
+            />
+            Placebo
+          </label>
+        </div>
+      </form>
+    </section>
   </section>
-</section>
+</ArtistQuestionScreen>
 `;

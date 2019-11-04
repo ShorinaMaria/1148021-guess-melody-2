@@ -1,16 +1,20 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import Enzyme, {mount} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import questions from '../../mocks/questions';
 import GenreQuestionScreen from './genre-question-screen';
+import toJson from 'enzyme-to-json';
+
+Enzyme.configure({adapter: new Adapter()});
 
 it(`GenreQuestionScreen renders correctly`, () => {
-  const tree = renderer.create(
+  const component = mount(
       <GenreQuestionScreen
         question={questions[0]}
         screenIndex={2}
         onAnswer={() => {}}
       />
-  ).toJSON();
+  );
 
-  expect(tree).toMatchSnapshot();
+  expect(toJson(component)).toMatchSnapshot();
 });
