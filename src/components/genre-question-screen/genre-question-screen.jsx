@@ -1,10 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import AudioPlayer from '../audio-player/audio-player.jsx';
 
 class GenreQuestionScreen extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.state = {answers: this.props.question.answers.map(() => false)};
+    this.state = {
+      activePlayer: -1,
+      answers: this.props.question.answers.map(() => false)
+    };
 
     this.handleAnswerChange = this.handleAnswerChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -58,10 +62,13 @@ class GenreQuestionScreen extends React.PureComponent {
             {answers.map((it, i) => {
               return (
                 <div key={`${screenIndex}-answer-${i}`} className="track">
-                  <button className="track__button track__button--play" type="button" />
-                  <div className="track__status">
-                    <audio />
-                  </div>
+                  <AudioPlayer
+                    src={it.src}
+                    isPlaying={i === this.state.activePlayer}
+                    onPlayButtonClick={() => this.setState({
+                      activePlayer: this.state.activePlayer === i ? -1 : i
+                    })}
+                  />
                   <div className="game__answer">
                     <input className="game__input visually-hidden"
                       type="checkbox"
@@ -83,7 +90,7 @@ class GenreQuestionScreen extends React.PureComponent {
   }
 }
 
-const genres = [`rock`, `jazz`, `folk`, `blues`, `pop`];
+const genres = [`rock`, `jazz`, `folk`, `blues`, `pop`, `classic`];
 
 export const GenreQuestion = PropTypes.shape({
   type: PropTypes.oneOf([`genre`]),

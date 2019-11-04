@@ -1,209 +1,274 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`GenreQuestionScreen renders correctly 1`] = `
-<section
-  className="game game--genre"
+<GenreQuestionScreen
+  onAnswer={[Function]}
+  question={
+    Object {
+      "answers": Array [
+        Object {
+          "genre": "classic",
+          "src": "http://mp3.classic-music.ru/music/vivaldi/01.mp3",
+        },
+        Object {
+          "genre": "pop",
+          "src": "http://dl2.mp3party.net/online/8464242.mp3",
+        },
+        Object {
+          "genre": "jazz",
+          "src": "http://dl2.mp3party.net/online/2072.mp3",
+        },
+        Object {
+          "genre": "rock",
+          "src": "http://dl2.mp3party.net/online/7625333.mp3",
+        },
+      ],
+      "genre": "jazz",
+      "type": "genre",
+    }
+  }
+  screenIndex={2}
 >
-  <header
-    className="game__header"
-  >
-    <a
-      className="game__back"
-    >
-      <span
-        className="visually-hidden"
-      >
-        Сыграть ещё раз
-      </span>
-      <img
-        alt="Угадай мелодию"
-        className="game__logo"
-        src="img/melody-logo-ginger.png"
-      />
-    </a>
-    <div
-      className="timer__value"
-    >
-      <span
-        className="timer__mins"
-      >
-        05
-      </span>
-      <span
-        className="timer__dots"
-      >
-        :
-      </span>
-      <span
-        className="timer__secs"
-      >
-        00
-      </span>
-    </div>
-    <div
-      className="game__mistakes"
-    >
-      <div
-        className="wrong"
-      />
-      <div
-        className="wrong"
-      />
-      <div
-        className="wrong"
-      />
-    </div>
-  </header>
   <section
-    className="game__screen"
+    className="game game--genre"
   >
-    <h2
-      className="game__title"
+    <header
+      className="game__header"
     >
-      Выберите 
-      rock
-       треки
-    </h2>
-    <form
-      className="game__tracks"
-      name="testik"
-      onSubmit={[Function]}
+      <a
+        className="game__back"
+      >
+        <span
+          className="visually-hidden"
+        >
+          Сыграть ещё раз
+        </span>
+        <img
+          alt="Угадай мелодию"
+          className="game__logo"
+          src="img/melody-logo-ginger.png"
+        />
+      </a>
+      <div
+        className="timer__value"
+      >
+        <span
+          className="timer__mins"
+        >
+          05
+        </span>
+        <span
+          className="timer__dots"
+        >
+          :
+        </span>
+        <span
+          className="timer__secs"
+        >
+          00
+        </span>
+      </div>
+      <div
+        className="game__mistakes"
+      >
+        <div
+          className="wrong"
+        />
+        <div
+          className="wrong"
+        />
+        <div
+          className="wrong"
+        />
+      </div>
+    </header>
+    <section
+      className="game__screen"
     >
-      <div
-        className="track"
+      <h2
+        className="game__title"
       >
-        <button
-          className="track__button track__button--play"
-          type="button"
-        />
+        Выберите 
+        jazz
+         треки
+      </h2>
+      <form
+        className="game__tracks"
+        name="testik"
+        onSubmit={[Function]}
+      >
         <div
-          className="track__status"
+          className="track"
+          key="2-answer-0"
         >
-          <audio />
-        </div>
-        <div
-          className="game__answer"
-        >
-          <input
-            checked={false}
-            className="game__input visually-hidden"
-            id="answer-0"
-            name="answer-0"
-            onChange={[Function]}
-            type="checkbox"
-            value="answer-0"
-          />
-          <label
-            className="game__check"
-            htmlFor="answer-0"
+          <AudioPlayer
+            isPlaying={false}
+            onPlayButtonClick={[Function]}
+            src="http://mp3.classic-music.ru/music/vivaldi/01.mp3"
           >
-            Отметить
-          </label>
-        </div>
-      </div>
-      <div
-        className="track"
-      >
-        <button
-          className="track__button track__button--play"
-          type="button"
-        />
-        <div
-          className="track__status"
-        >
-          <audio />
-        </div>
-        <div
-          className="game__answer"
-        >
-          <input
-            checked={false}
-            className="game__input visually-hidden"
-            id="answer-1"
-            name="answer-1"
-            onChange={[Function]}
-            type="checkbox"
-            value="answer-1"
-          />
-          <label
-            className="game__check"
-            htmlFor="answer-1"
+            <button
+              className="track__button track__button--play"
+              disabled={true}
+              onClick={[Function]}
+              type="button"
+            />
+            <div
+              className="track__status"
+            >
+              <audio />
+            </div>
+          </AudioPlayer>
+          <div
+            className="game__answer"
           >
-            Отметить
-          </label>
+            <input
+              checked={false}
+              className="game__input visually-hidden"
+              id="answer-0"
+              name="answer-0"
+              onChange={[Function]}
+              type="checkbox"
+              value="answer-0"
+            />
+            <label
+              className="game__check"
+              htmlFor="answer-0"
+            >
+              Отметить
+            </label>
+          </div>
         </div>
-      </div>
-      <div
-        className="track"
-      >
-        <button
-          className="track__button track__button--play"
-          type="button"
-        />
         <div
-          className="track__status"
+          className="track"
+          key="2-answer-1"
         >
-          <audio />
-        </div>
-        <div
-          className="game__answer"
-        >
-          <input
-            checked={false}
-            className="game__input visually-hidden"
-            id="answer-2"
-            name="answer-2"
-            onChange={[Function]}
-            type="checkbox"
-            value="answer-2"
-          />
-          <label
-            className="game__check"
-            htmlFor="answer-2"
+          <AudioPlayer
+            isPlaying={false}
+            onPlayButtonClick={[Function]}
+            src="http://dl2.mp3party.net/online/8464242.mp3"
           >
-            Отметить
-          </label>
-        </div>
-      </div>
-      <div
-        className="track"
-      >
-        <button
-          className="track__button track__button--play"
-          type="button"
-        />
-        <div
-          className="track__status"
-        >
-          <audio />
-        </div>
-        <div
-          className="game__answer"
-        >
-          <input
-            checked={false}
-            className="game__input visually-hidden"
-            id="answer-3"
-            name="answer-3"
-            onChange={[Function]}
-            type="checkbox"
-            value="answer-3"
-          />
-          <label
-            className="game__check"
-            htmlFor="answer-3"
+            <button
+              className="track__button track__button--play"
+              disabled={true}
+              onClick={[Function]}
+              type="button"
+            />
+            <div
+              className="track__status"
+            >
+              <audio />
+            </div>
+          </AudioPlayer>
+          <div
+            className="game__answer"
           >
-            Отметить
-          </label>
+            <input
+              checked={false}
+              className="game__input visually-hidden"
+              id="answer-1"
+              name="answer-1"
+              onChange={[Function]}
+              type="checkbox"
+              value="answer-1"
+            />
+            <label
+              className="game__check"
+              htmlFor="answer-1"
+            >
+              Отметить
+            </label>
+          </div>
         </div>
-      </div>
-      <button
-        className="game__submit button"
-        type="submit"
-      >
-        Ответить
-      </button>
-    </form>
+        <div
+          className="track"
+          key="2-answer-2"
+        >
+          <AudioPlayer
+            isPlaying={false}
+            onPlayButtonClick={[Function]}
+            src="http://dl2.mp3party.net/online/2072.mp3"
+          >
+            <button
+              className="track__button track__button--play"
+              disabled={true}
+              onClick={[Function]}
+              type="button"
+            />
+            <div
+              className="track__status"
+            >
+              <audio />
+            </div>
+          </AudioPlayer>
+          <div
+            className="game__answer"
+          >
+            <input
+              checked={false}
+              className="game__input visually-hidden"
+              id="answer-2"
+              name="answer-2"
+              onChange={[Function]}
+              type="checkbox"
+              value="answer-2"
+            />
+            <label
+              className="game__check"
+              htmlFor="answer-2"
+            >
+              Отметить
+            </label>
+          </div>
+        </div>
+        <div
+          className="track"
+          key="2-answer-3"
+        >
+          <AudioPlayer
+            isPlaying={false}
+            onPlayButtonClick={[Function]}
+            src="http://dl2.mp3party.net/online/7625333.mp3"
+          >
+            <button
+              className="track__button track__button--play"
+              disabled={true}
+              onClick={[Function]}
+              type="button"
+            />
+            <div
+              className="track__status"
+            >
+              <audio />
+            </div>
+          </AudioPlayer>
+          <div
+            className="game__answer"
+          >
+            <input
+              checked={false}
+              className="game__input visually-hidden"
+              id="answer-3"
+              name="answer-3"
+              onChange={[Function]}
+              type="checkbox"
+              value="answer-3"
+            />
+            <label
+              className="game__check"
+              htmlFor="answer-3"
+            >
+              Отметить
+            </label>
+          </div>
+        </div>
+        <button
+          className="game__submit button"
+          type="submit"
+        >
+          Ответить
+        </button>
+      </form>
+    </section>
   </section>
-</section>
+</GenreQuestionScreen>
 `;

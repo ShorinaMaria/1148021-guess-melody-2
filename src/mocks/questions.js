@@ -1,44 +1,44 @@
 const questions = [
   {
     type: `genre`,
-    genre: `rock`,
+    genre: `jazz`,
     answers: [
       {
-        src: `https://upload.wikimedia.org/wikipedia/commons/1/1f/Uganda_flag_and_national_anthem_-_Oh_Uganda_Land_o.ogg`,
-        genre: `rock`,
+        src: `http://mp3.classic-music.ru/music/vivaldi/01.mp3`,
+        genre: `classic`,
       },
       {
-        src: `https://upload.wikimedia.org/wikipedia/commons/1/1f/Uganda_flag_and_national_anthem_-_Oh_Uganda_Land_o.ogg`,
+        src: `http://dl2.mp3party.net/online/8464242.mp3`,
         genre: `pop`,
       },
       {
-        src: `https://upload.wikimedia.org/wikipedia/commons/1/1f/Uganda_flag_and_national_anthem_-_Oh_Uganda_Land_o.ogg`,
+        src: `http://dl2.mp3party.net/online/2072.mp3`,
         genre: `jazz`,
       },
       {
-        src: `https://upload.wikimedia.org/wikipedia/commons/1/1f/Uganda_flag_and_national_anthem_-_Oh_Uganda_Land_o.ogg`,
+        src: `http://dl2.mp3party.net/online/7625333.mp3`,
         genre: `rock`,
       },
     ],
   },
   {
     type: `genre`,
-    genre: `folk`,
+    genre: `rock`,
     answers: [
       {
-        src: `https://upload.wikimedia.org/wikipedia/commons/1/1f/Uganda_flag_and_national_anthem_-_Oh_Uganda_Land_o.ogg`,
+        src: `http://mp3.classic-music.ru/music/vivaldi/01.mp3`,
+        genre: `classic`,
+      },
+      {
+        src: `http://dl2.mp3party.net/online/914916.mp3`,
         genre: `rock`,
       },
       {
-        src: `https://upload.wikimedia.org/wikipedia/commons/1/1f/Uganda_flag_and_national_anthem_-_Oh_Uganda_Land_o.ogg`,
-        genre: `pop`,
-      },
-      {
-        src: `https://upload.wikimedia.org/wikipedia/commons/1/1f/Uganda_flag_and_national_anthem_-_Oh_Uganda_Land_o.ogg`,
+        src: `http://dl2.mp3party.net/online/2072.mp3`,
         genre: `jazz`,
       },
       {
-        src: `https://upload.wikimedia.org/wikipedia/commons/1/1f/Uganda_flag_and_national_anthem_-_Oh_Uganda_Land_o.ogg`,
+        src: `http://dl2.mp3party.net/online/8468238.mp3`,
         genre: `rock`,
       },
     ],
@@ -46,8 +46,8 @@ const questions = [
   {
     type: `artist`,
     song: {
-      artist: `Jim Beam`,
-      src: `https://upload.wikimedia.org/wikipedia/commons/1/1f/Uganda_flag_and_national_anthem_-_Oh_Uganda_Land_o.ogg`,
+      artist: `Placebo`,
+      src: `http://dl2.mp3party.net/online/8468238.mp3`,
     },
     answers: [
       {
@@ -60,20 +60,20 @@ const questions = [
       },
       {
         picture: `http://placehold.it/134x134`,
-        artist: `Jim Beam`,
+        artist: `Placebo`,
       },
     ],
   },
   {
     type: `artist`,
     song: {
-      artist: `Jack Daniels`,
-      src: `https://upload.wikimedia.org/wikipedia/commons/1/1f/Uganda_flag_and_national_anthem_-_Oh_Uganda_Land_o.ogg`,
+      artist: `Scorpions`,
+      src: `http://dl2.mp3party.net/online/7625333.mp3`,
     },
     answers: [
       {
         picture: `http://placehold.it/134x134`,
-        artist: `John Snow`,
+        artist: `Scorpions`,
       },
       {
         picture: `http://placehold.it/134x134`,

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AudioPlayer renders correctly 1`] = `
+<AudioPlayer
+  isPlaying={false}
+  onPlayButtonClick={[Function]}
+  src="http://mp3.classic-music.ru/music/vivaldi/01.mp3"
+>
+  <button
+    className="track__button track__button--play"
+    disabled={true}
+    onClick={[Function]}
+    type="button"
+  />
+  <div
+    className="track__status"
+  >
+    <audio />
+  </div>
+</AudioPlayer>
+`;
